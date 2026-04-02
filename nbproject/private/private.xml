@@ -15,12 +15,11 @@
             <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/src/java/com/finlogic/employee/servlet/UpdateEmployeeServlet.java</file>
             <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/src/java/com/finlogic/employee/DAO/EmployeeDao.java</file>
             <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/web/ViewEmployees.jsp</file>
+            <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/web/AddEmployee.html</file>
             <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/src/java/com/finlogic/employee/servlet/LogOutServlet.java</file>
             <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/src/java/com/finlogic/employee/servlet/EmpDashboardServelet.java</file>
-            <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/web/AdminLogin.html</file>
-            <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/web/AdminHome.html</file>
-            <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/src/java/com/finlogic/employee/servlet/AdminDashboardServlet.java</file>
+            <file>file:/C:/Users/abhi/Documents/NetBeansProjects/employee/src/java/com/finlogic/employee/servlet/EditEmployeeServlet.java</file>
         </group>
     </open-files>
 </project-private>
