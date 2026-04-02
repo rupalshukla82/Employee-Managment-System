@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ///*
 // * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 // * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -10,6 +11,17 @@ import java.util.*;
 // * @author abhi
 // */
 //
+=======
+
+//package com.finlogic.employee.config;
+//import java.sql.*;
+
+/**
+ *
+ * @author abhi
+ */
+
+>>>>>>> 56bed85 (Update DBConnection to use environment variables and new WAR file)
 //
 //public class DBConnection {
 //  
@@ -36,6 +48,11 @@ import java.util.*;
 //}
 //
 //}
+
+
+package com.finlogic.employee.config;
+
+import java.sql.*;
 
 
 public class DBConnection {
