@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raise Complaint</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="CSS/RaiseComplaint.css"/>
+</head>
+<body>
+<div class="card">
+    <h2>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Raise a Complaint
+    </h2>
+
+    <form action="RaiseComplaintServlet" method="POST">
+
+        <!-- Complaint Type -->
+        <div class="form-group">
+            <label>
+                <i class="fa-solid fa-tag"></i> Complaint Type
+            </label>
+            <select name="type" required>
+                <option value="">-- Select Complaint Type --</option>
+                <optgroup label="Technical issue">
+                    <option value="PC/Laptop Not Working">PC/Laptop Not Working</option>
+                    <option value="Internet Not Working">Internet Not Working</option>
+                    <option value="Software Issue">Software Issue</option>
+                    <option value="Printer/Scanner Issue">Printer/Scanner Issue</option>
+                </optgroup>
+                <optgroup label=" HR Issues">
+                    <option value="Salary Not Received">Salary Not Received</option>
+                    <option value="Leave Not Approved">Leave Not Approved</option>
+                    <option value="Work Overload">Work Overload</option>
+                </optgroup>
+                <optgroup label=" Behaviour Issues">
+                    <option value="Misbehaviour by Colleague">Misbehaviour by Colleague</option>
+                    <option value="Abusive Language">Abusive Language</option>
+                    <option value="Harassment">Harassment</option>
+                </optgroup>
+                <optgroup label=" Office Issues">
+                    <option value="AC/Fan Not Working">AC/Fan Not Working</option>
+                    <option value="Cafeteria Issue">Cafeteria Issue</option>
+                    <option value="Cleanliness Issue">Cleanliness Issue</option>
+                    <option value="Other">Other</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <!-- Subject -->
+        <div class="form-group">
+            <label>
+                <i class="fa-solid fa-heading"></i> Subject
+            </label>
+            <input type="text" name="subject"
+                   placeholder="Enter complaint subject..." required />
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+            <label>
+                <i class="fa-solid fa-pen"></i> Description
+            </label>
+            <textarea name="description"
+                      placeholder="Describe your complaint in detail..."
+                      required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+            <i class="fa-solid fa-paper-plane"></i> Submit Complaint
+        </button>
+    </form>
+
+    <a href="EmpDashboardServelet" class="back">← Back to Dashboard</a>
+</div>
+</body>
+</html>

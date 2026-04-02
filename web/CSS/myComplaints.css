@@ -1,0 +1,84 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 1, 2026, 3:57:07 PM
+    Author     : abhi
+*/
+
+
+ * { margin:0; padding:0; box-sizing:border-box;
+            font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+        body { background:#f0f0f0; min-height:100vh; }
+        .navbar {
+            background: linear-gradient(135deg, #6a0f5c, #a30082);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h2 { color: white; font-size: 1.3rem; }
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background: rgba(255,255,255,0.4); }
+        .container { padding: 30px; }
+        .raise-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #6a0f5c;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .raise-btn:hover { background: #a30082; }
+        .table-wrapper {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        table { border-collapse: collapse; width: 100%; }
+        th {
+            background: linear-gradient(135deg, #6a0f5c, #a30082);
+            color: white;
+            padding: 14px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.88rem;
+        }
+        tr:hover td { background: #fdf0fb; }
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .OPEN       { background: #fff3cd; color: #856404; }
+        .INPROGRESS { background: #cfe2ff; color: #084298; }
+        .RESOLVED   { background: #d1e7dd; color: #0f5132; }
+        .CLOSED     { background: #e2e3e5; color: #41464b; }
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+        }
+        .no-data i {
+            font-size: 2rem;
+            color: #ccc;
+            display: block;
+            margin-bottom: 10px;
+        }

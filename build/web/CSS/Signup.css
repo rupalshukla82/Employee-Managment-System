@@ -1,0 +1,117 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 18, 2026, 5:18:00 PM
+    Author     : abhi
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a0f5c, #a30082);
+}
+
+form {
+    background: #ffffff;
+    width: 400px;
+    max-height: 800px;
+    padding: 2rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    overflow: hidden; /* prevents scrolling */
+}
+
+h1 {
+    text-align: center;
+    color: #6a0f5c;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+input {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6a0f5c;
+    box-shadow: 0 0 5px rgba(106, 15, 92, 0.3);
+}
+
+input[type="submit"] {
+    background: #6a0f5c;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background: #a30082;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.login-link a {
+    color: #6a0f5c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+.toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 1rem;
+}
+.toggle-eye:hover {
+    color: #6a0f5c;
+}
+
+@media (max-width: 450px) {
+    form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}

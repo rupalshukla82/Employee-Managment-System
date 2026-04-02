@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Employee Management System</title>
+<link rel="stylesheet" href="CSS/Index.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon">
+      <!-- building icon -->
+      <div class="icon icon-building" style="color:rgba(255,220,255,.9)">
+        <div class="w1"></div><div class="w2"></div><div class="w3"></div><div class="w4"></div>
+      </div>
+    </div>
+    EmpManager
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#roles">Roles</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="login.html" class="btn btn-outline">
+      <div class="icon icon-user" style="color:#fff;width:14px;height:16px;flex-shrink:0"></div>
+      Log in
+    </a>
+    <a href="RegistrationForm.html" class="btn btn-white">
+      <div class="icon icon-plus" style="color:#8b0070;width:14px;height:14px;flex-shrink:0"></div>
+      Sign up
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge"><div class="badge-dot"></div>Employee Management System</div>
+  <h1>One portal for your<br/><span class="highlight">entire workforce</span></h1>
+  <p>Manage employees, control access, and keep everything organized — all from one secure, role-based platform.</p>
+
+  <div class="hero-actions">
+    <a href="RegistrationForm.html" class="btn-hp">
+      <div class="icon icon-plus" style="color:#8b0070;width:16px;height:16px"></div>
+      Get started — it's free
+    </a>
+    <a href="login.html" class="btn-ho">
+      <div class="icon icon-user" style="color:#fff;width:16px;height:18px"></div>
+      Log into your account
+    </a>
+  </div>
+
+  <div class="hero-card">
+    <!-- clickable -->
+    <a href="AdminLogin.html" class="qbtn">
+      <div class="qicon">
+        <div class="icon icon-shield" style="color:rgba(255,220,255,.9);width:16px;height:20px"></div>
+      </div>
+      Admin Login
+    </a>
+    <a href="login.html" class="qbtn">
+      <div class="qicon">
+        <div class="icon icon-user" style="color:rgba(255,220,255,.9);width:16px;height:18px"></div>
+      </div>
+      Employee Login
+    </a>
+    <a href="RegistrationForm.html" class="qbtn">
+      <div class="qicon">
+        <div class="icon icon-register" style="color:rgba(255,220,255,.9);width:14px;height:18px">
+          <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+        </div>
+      </div>
+      Register
+    </a>
+    <!-- disabled -->
+    <div class="qbtn-disabled">
+      <div class="qicon">
+        <div class="icon icon-plus" style="color:rgba(255,255,255,.25);width:14px;height:14px"></div>
+      </div>
+      Add Employee
+      <span class="lock-tip">Login required</span>
+    </div>
+    <div class="qbtn-disabled">
+      <div class="qicon">
+        <div class="icon icon-eye" style="color:rgba(255,255,255,.25);width:18px;height:12px"></div>
+      </div>
+      View Employees
+      <span class="lock-tip">Login required</span>
+    </div>
+    <div class="qbtn-disabled">
+      <div class="qicon">
+        <div class="icon icon-users" style="color:rgba(255,255,255,.25);width:20px;height:18px">
+          <div class="u2"></div><div class="u3"></div>
+        </div>
+      </div>
+      My Profile
+      <span class="lock-tip">Login required</span>
+    </div>
+    <p class="card-note">Add Employee, View &amp; Profile are accessible after login only</p>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip reveal">
+  <div class="trust-item">
+    <div class="trust-icon">
+      <div class="icon icon-lock" style="color:rgba(255,200,255,.9);width:16px;height:18px"></div>
+    </div>
+    <div class="trust-text">
+      <span class="trust-title">Secure Access</span>
+      <span class="trust-desc">Role-based login for every user</span>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <div class="icon icon-bolt" style="color:rgba(255,200,255,.9);width:13px;height:19px"></div>
+    </div>
+    <div class="trust-text">
+      <span class="trust-title">Fast &amp; Reliable</span>
+      <span class="trust-desc">Instant data, zero delays</span>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <div class="icon icon-shield" style="color:rgba(255,200,255,.9);width:16px;height:20px"></div>
+    </div>
+    <div class="trust-text">
+      <span class="trust-title">Data Protected</span>
+      <span class="trust-desc">Encrypted passwords, safe storage</span>
+    </div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon">
+      <div class="icon icon-target" style="color:rgba(255,200,255,.9);width:20px;height:20px">
+        <div class="dot"></div>
+      </div>
+    </div>
+    <div class="trust-text">
+      <span class="trust-title">Easy to Use</span>
+      <span class="trust-desc">Clean interface, no training needed</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div id="features" class="features-section">
+  <div class="reveal">
+    <span class="sec-tag">Core Features</span>
+    <h2 class="sec-title">Everything you need<br/>to manage your team</h2>
+    <p class="sec-sub">A complete platform built to make employee management effortless for everyone.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feat-card reveal">
+      <div class="feat-icon"><div class="icon icon-lock" style="color:rgba(255,220,255,1);width:16px;height:20px"></div></div>
+      <h3>Role-Based Login</h3>
+      <p>Admin and employee accounts with separate access levels. Everyone sees only what they need.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">
+        <div class="icon icon-users" style="color:rgba(255,220,255,1);width:22px;height:20px">
+          <div class="u2"></div><div class="u3"></div>
+        </div>
+      </div>
+      <h3>Employee Management</h3>
+      <p>Add, view, edit and delete employee records with ease from a clean admin interface.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon"><div class="icon icon-user" style="color:rgba(255,220,255,1);width:18px;height:20px"></div></div>
+      <h3>Personal Profiles</h3>
+      <p>Every employee gets their own profile to view details, update info and change password.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon"><div class="icon icon-search" style="color:rgba(255,220,255,1);width:20px;height:20px"></div></div>
+      <h3>Search &amp; Filter</h3>
+      <p>Find employees instantly by name or department in seconds.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">
+        <div class="icon icon-chart" style="color:rgba(255,220,255,1);width:20px;height:18px">
+          <div class="b1"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div>
+        </div>
+      </div>
+      <h3>Admin Dashboard</h3>
+      <p>See your entire team at a glance — stats, departments and quick actions in one place.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">
+        <div class="icon icon-folder" style="color:rgba(255,220,255,1);width:20px;height:18px">
+          <div class="tab"></div>
+        </div>
+      </div>
+      <h3>Resume Storage</h3>
+      <p>Upload and view employee resumes securely. Open documents directly in the browser.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ROLES -->
+<div id="roles" class="roles-section">
+  <div class="roles-inner">
+    <div class="reveal">
+      <span class="sec-tag">Two Roles</span>
+      <h2 class="sec-title">Built for<br/>both sides</h2>
+      <p class="sec-sub" style="margin-bottom:0">Whether you run the team or you're part of it — the platform has you covered.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div class="role-card reveal">
+        <div class="role-head">
+          <span class="rbadge rb-admin">Admin</span>
+          <span class="role-head-title">Full Control</span>
+        </div>
+        <div class="role-body">
+          <div class="role-row"><div class="chk"></div>Add new employees to the system</div>
+          <div class="role-row"><div class="chk"></div>Edit or delete any employee record</div>
+          <div class="role-row"><div class="chk"></div>View all profiles and uploaded resumes</div>
+          <div class="role-row"><div class="chk"></div>Access the full admin dashboard</div>
+          <div class="role-row"><div class="chk"></div>Manage departments and roles</div>
+        </div>
+      </div>
+      <div class="role-card reveal">
+        <div class="role-head">
+          <span class="rbadge rb-user">Employee</span>
+          <span class="role-head-title">Personal Access</span>
+        </div>
+        <div class="role-body">
+          <div class="role-row"><div class="chk"></div>View and update your own profile</div>
+          <div class="role-row"><div class="chk"></div>Change your password securely</div>
+          <div class="role-row"><div class="chk"></div>View colleagues in your department</div>
+          <div class="role-row"><div class="chk"></div>Browse the company directory</div>
+          <div class="role-row"><div class="chk"></div>Upload and manage your resume</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section id="about" class="cta-section">
+  <div class="cta-box reveal">
+    <h2>Ready to get started?</h2>
+    <p>Sign up in seconds. Log in and get full access to your portal right away.</p>
+    <div class="cta-btns">
+      <a href="RegistrationForm.html" class="btn-hp">
+        <div class="icon icon-plus" style="color:#8b0070;width:16px;height:16px"></div>
+        Create your account
+      </a>
+      <a href="login.html" class="btn-ho">
+        <div class="icon icon-user" style="color:#fff;width:16px;height:18px"></div>
+        Log in instead
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="#" class="footer-logo">
+        <div class="footer-logo-icon">
+          <div class="icon icon-building" style="color:rgba(255,220,255,.9);width:20px;height:20px">
+            <div class="w1"></div><div class="w2"></div><div class="w3"></div><div class="w4"></div>
+          </div>
+        </div>
+        EmpManager
+      </a>
+      <p class="footer-tagline">A simple, secure portal for managing your team — built for admins and employees alike.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigation</p>
+      <ul class="footer-links-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Account</p>
+      <ul class="footer-links-list">
+        <li>
+          <a href="login.html">
+            <div class="icon icon-user" style="color:rgba(255,180,255,.6);width:12px;height:14px;flex-shrink:0"></div>
+            Employee Login
+          </a>
+        </li>
+        <li>
+          <a href="AdminLogin.html">
+            <div class="icon icon-shield" style="color:rgba(255,180,255,.6);width:12px;height:15px;flex-shrink:0"></div>
+            Admin Login
+          </a>
+        </li>
+        <li>
+          <a href="RegistrationForm.html">
+            <div class="icon icon-plus" style="color:rgba(255,180,255,.6);width:12px;height:12px;flex-shrink:0"></div>
+            Sign Up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 EmpManager. All rights reserved.</p>
+    <ul class="footer-bottom-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e,i) => {
+      if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 90);
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

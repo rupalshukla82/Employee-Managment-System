@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Leave</title>
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="CSS/ApplyLeave.css"/>
+</head>
+<body>
+<div class="card">
+    <h2>
+        <i class="fa-solid fa-calendar-xmark"></i>
+        Apply for Leave
+    </h2>
+
+    <form action="ApplyLeaveServlet" method="POST">
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-tag"></i> Leave Type</label>
+            <select name="leave_type" required>
+                <option value="">-- Select Leave Type --</option>
+                <option value="Sick Leave">Sick Leave</option>
+                <option value="Casual Leave">Casual Leave</option>
+                <option value="Emergency Leave">Emergency Leave</option>
+                <option value="Personal Leave">Personal Leave</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-calendar"></i> From Date</label>
+            <input type="date" name="from_date" required />
+        </div>
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-calendar"></i> To Date</label>
+            <input type="date" name="to_date" required />
+        </div>
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-pen"></i> Reason</label>
+            <textarea name="reason" placeholder="Enter reason for leave..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+            <i class="fa-solid fa-paper-plane"></i> Submit Application
+        </button>
+    </form>
+
+    <a href="EmpDashboardServelet" class="back">← Back to Dashboard</a>
+</div>
+</body>
+</html>

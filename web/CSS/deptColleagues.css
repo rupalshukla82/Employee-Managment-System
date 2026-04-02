@@ -1,0 +1,233 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 1, 2026, 4:20:01 PM
+    Author     : abhi
+*/
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background:#f0f0f0;
+    min-height:100vh;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #6a0f5c, #a30082);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h2 {
+    color: white;
+    font-size: 1.3rem;
+}
+.navbar h2 i {
+    margin-right: 8px;
+}
+.back-btn {
+    color: white;
+    text-decoration: none;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.back-btn:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.container {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Department Info Card */
+.dept-info {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 6px solid #6a0f5c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dept-info h3 {
+    color: #6a0f5c;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+.dept-info h3 i {
+    margin-right: 8px;
+}
+.dept-info p {
+    color: #888;
+    font-size: 0.9rem;
+}
+.dept-info .count {
+    text-align: center;
+    background: linear-gradient(135deg, #6a0f5c, #a30082);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+.dept-info .count p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.dept-info .count small {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+}
+
+/* My Profile Card */
+.my-card {
+    background: linear-gradient(135deg, #6a0f5c, #a30082);
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.my-card .avatar {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.my-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+.my-card p {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+.my-card .you-badge {
+    margin-left: auto;
+    background: rgba(255,255,255,0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Section title */
+.section-title {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.section-title i {
+    color: #a30082;
+    margin-right: 6px;
+}
+
+/* Colleague Cards Grid */
+.colleagues-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.colleague-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-top: 4px solid #a30082;
+}
+.colleague-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.colleague-card .avatar {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #6a0f5c, #a30082);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+.colleague-card h4 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+.colleague-card .position-badge {
+    display: inline-block;
+    background: #f0e6f0;
+    color: #6a0f5c;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.colleague-card .info-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+}
+.colleague-card .info-row i {
+    color: #a30082;
+    width: 14px;
+}
+
+/* No colleagues */
+.no-data {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.no-data i {
+    font-size: 3rem;
+    color: #ddd;
+    display: block;
+    margin-bottom: 15px;
+}
+
+@media(max-width: 768px){
+    .colleagues-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .dept-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+@media(max-width: 500px){
+    .colleagues-grid {
+        grid-template-columns: 1fr;
+    }
+}

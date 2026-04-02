@@ -1,0 +1,67 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 22, 2026, 8:59:21 PM
+    Author     : abhi
+*/
+
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6a0f5c, #a30082);
+        }
+
+        form {
+            background: #fff;
+            width: 400px;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a0f5c;
+        }
+
+        input {
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input[readonly] {
+         background-color: #f0f0f0;  /* grey background */
+         color: #888;                 /* grey text */
+         cursor: not-allowed;         /* shows no-edit cursor */
+         border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background: #6a0f5c;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #a30082;
+        }
+
+        small {
+            font-size: 0.8rem;
+            color: gray;
+        }

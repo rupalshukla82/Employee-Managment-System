@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration</title>
+  <link rel="stylesheet" href="CSS/AddEmp.css"/>
+  <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+    <form action="AddServlet" method="POST" enctype="multipart/form-data">
+        <h1>ADD Employee</h1>
+
+        <input type="text" name="full_name" placeholder="Full Name"
+               required pattern="[a-zA-Z ]+" title="Alphabets only" />
+        <input type="text" name="username" placeholder="Username"
+               required pattern="[a-zA-Z0-9@]{5,20}"
+               title="5 to 20 characters" />
+
+        <!--  Password with eye toggle -->
+        <div class="password-wrapper">
+            <input type="password" id="addPassword" name="password"
+                   placeholder="Password" required
+                   pattern="[a-zA-Z0-9@#$&]{5,20}"
+                   title="5 to 20 characters" />
+            <i class="fa-solid fa-eye toggle-eye"
+               id="toggleAdd"
+               onclick="togglePassword('addPassword','toggleAdd')"></i>
+        </div>
+
+        <input type="email" name="email"     placeholder="Email"       required />
+        <input type="tel"   name="phone"     placeholder="Phone Number"
+               required pattern="[0-9]{10}" title="10 digit number" />
+        <input type="text"  name="city"      placeholder="City"
+               required pattern="[a-zA-Z ]+" title="Alphabets only" />
+        <input type="text"  name="position"  placeholder="Applying Position"
+               required pattern="[a-zA-Z ]+" title="Alphabets only" />
+        <input type="text"  name="department" placeholder="Department"
+               required pattern="[a-zA-Z ]+" title="Alphabets only" />
+        <input type="file"  name="resume"    required accept=".pdf" />
+
+        <input type="hidden" name="source" value="admin" />
+        <input type="submit" value="Add Employee" />
+    </form>
+
+    <script>
+        function togglePassword(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon  = document.getElementById(iconId);
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.replace("fa-eye-slash", "fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>
