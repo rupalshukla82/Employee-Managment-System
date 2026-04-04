@@ -1,15 +1,13 @@
-FROM tomcat:10-jdk17
+FROM tomcat:10-jdk17-temurin
 
-RUN rm -rf /usr/local/tomcat/webapps/*
+# Clean default webapps
+RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
+# Deploy WAR as ROOT
 COPY dist/employee.war /usr/local/tomcat/webapps/ROOT.war
 
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-
-# Default (Railway will override this)
-ENV PORT=8080
-
+# Expose port 8080
 EXPOSE 8080
 
-CMD ["/start.sh"]
+# Start Tomcat
+CMD ["catalina.sh", "run"]
