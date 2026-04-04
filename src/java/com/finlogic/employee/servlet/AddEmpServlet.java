@@ -1,115 +1,117 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package com.finlogic.employee.servlet;
 
 import com.finlogic.employee.DAO.EmployeeDao;
-import com.finlogic.employee.config.DBConnection;
 import com.finlogic.employee.model.Employee;
 import java.io.IOException;
-import java.io.InputStream;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
-import java.util.*;
 import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.http.Part;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
 
-/**
- *
- * @author abhi
- */
 @WebServlet("/AddServlet")
-@MultipartConfig(maxFileSize = 5242880) //max file size 5MB
+@MultipartConfig(maxFileSize = 5242880)
 public class AddEmpServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-         try{
-           
-             Part resumePart = request.getPart("resume");
-             byte[] resume = null;
-             if(resumePart !=null && resumePart.getSize() >0)
-             {
-                 resume = resumePart.getInputStream().readAllBytes();
-             }        
-        Employee emp = new Employee(
-         request.getParameter("full_name"),
-         request.getParameter("username"),
-         request.getParameter("password"),
-         request.getParameter("email"),
-         request.getParameter("phone"), 
-         request.getParameter("city"),
-         request.getParameter("position"),
-         request.getParameter("department"),
-         resume
-//         request.getPart("resume").getInputStream();
-        
-        );
-        
-        
-        String Source = request.getParameter("source");
-        
-         EmployeeDao  dao = new EmployeeDao();
-         dao.addEmployee(emp);
-         
-         //chek size of file which is less than 2MB
-         if(resumePart.getSize() > 2*1024*1024){
-             response.setContentType("text/html");
-             response.getWriter().println(
-             "<script>"+
-                     "alert('file size must be less than 2MB!');"
-                     +
-                     "window.history.back();"
-                     +
-                     "</script>"
-             );
-             
-             return;
-         }
-         
-         if(Source != null && Source.equals("admin")){
-             response.setContentType("text/html");
-             response.getWriter().println(
-                  "<script>" + 
-                         
-                         "alert('Employee Added Scuessfully');" 
-                        +
-                          "window.location.href='AdminDashboardServlet'"
-                        +
-                          
-                  "</script>" 
-                     
-                     );
-         }
-         else{
-             
-               response.setContentType("text/html");
-             response.getWriter().println(
-                  "<script>" + 
-                         
-                         "alert('Employee Added Scuessfully');" 
-                        +
-                          "window.location.href='login.html'"
-                        +
-                          
-                  "</script>" 
-                     
-                     );
-             
-         }
-        
-          }catch(Exception e){
-//            System.out.println("e is:"+e);
-              e.printStackTrace();
-        }
-        
-    }
-       
 
+        response.setContentType("text/html;charset=UTF-8");
+
+        try {
+            Part resumePart = request.getPart("resume");
+
+            //  Step 1 — Check file type
+            if (resumePart != null && resumePart.getSize() > 0) {
+                String fileName = resumePart.getSubmittedFileName();
+                if (fileName == null || !fileName.toLowerCase().endsWith(".pdf")) {
+                    response.getWriter().println(
+                        "<script>" +
+                        "alert('Only PDF files are allowed!');" +
+                        "window.history.back();" +
+                        "</script>"
+                    );
+                    return;
+                }
+            }
+
+            //  Step 2 — Check file size
+            if (resumePart != null && resumePart.getSize() > 2 * 1024 * 1024) {
+                response.getWriter().println(
+                    "<script>" +
+                    "alert('File size must be less than 2MB!');" +
+                    "window.history.back();" +
+                    "</script>"
+                );
+                return;
+            }
+
+            //  Step 3 — Read resume bytes
+            byte[] resume = null;
+            if (resumePart != null && resumePart.getSize() > 0) {
+                resume = resumePart.getInputStream().readAllBytes();
+            }
+
+            //  Step 4 — Create Employee object
+            Employee emp = new Employee(
+                request.getParameter("full_name"),
+                request.getParameter("username"),
+                request.getParameter("password"),
+                request.getParameter("email"),
+                request.getParameter("phone"),
+                request.getParameter("city"),
+                request.getParameter("position"),
+                request.getParameter("department"),
+                resume
+            );
+
+            //  Step 5 — Save to DB
+            EmployeeDao dao = new EmployeeDao();
+            boolean status = dao.addEmployee(emp);
+
+            String source = request.getParameter("source");
+
+            //  Step 6 — Check if save failed
+            if (!status) {
+                response.getWriter().println(
+                    "<script>" +
+                    "alert('Something went wrong! Please try again.');" +
+                    "window.history.back();" +
+                    "</script>"
+                );
+                return;
+            }
+
+            //  Step 7 — Redirect based on source
+            if (source != null && source.equals("admin")) {
+                response.getWriter().println(
+                    "<script>" +
+                    "alert('Employee Added Successfully!');" +
+                    "window.location.href='AdminDashboardServlet';" +
+                    "</script>"
+                );
+            } else {
+                response.getWriter().println(
+                    "<script>" +
+                    "alert('Registration Successful! Please Login.');" +
+                    "window.location.href='login.html';" +
+                    "</script>"
+                );
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.getWriter().println(
+                "<script>" +
+                "alert('Something went wrong! Please try again.');" +
+                "window.history.back();" +
+                "</script>"
+            );
+        }
+    }
+
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.sendRedirect("RegistrationForm.html");
+    }
 }
